@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.completeinnovations.ert.ui.activity.ExpenseReportActivity">
+
+    <!-- Save Report -->
+    <item android:id="@+id/expense_details_activity_action_save"
+        android:icon="@drawable/ic_action_save"
+        android:title="save"
+        app:showAsAction="ifRoom" />
+
+    <!-- Manage expenses button -->
+    <item android:id="@+id/expense_report_activity_action_manage_expenses"
+        android:icon="@drawable/ic_action_next"
+        android:title="Manage Expense"
+        app:showAsAction="ifRoom" />
+</menu>

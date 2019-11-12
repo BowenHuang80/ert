@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="com.completeinnovations.ert.ui.activity.ManageExpensesActivity.ManageExpensesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/fragment_expenses_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subtotal: "
+                />
+
+            <TextView
+                android:id="@+id/fragment_expenses_hst_total"
+                android:paddingTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HST Total: 13"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/fragment_expenses_gst_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GST Total: 5"
+                />
+
+            <TextView
+                android:id="@+id/fragment_expenses_qst_total"
+                android:paddingTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QST Total: 1"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_manage_expenses_submitter_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        >
+
+        <TextView
+            android:id="@+id/fragment_manage_expenses_submitted_on"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submitted on: Jan 3, 2015"
+            />
+
+        <TextView
+            android:id="@+id/fragment_manage_expenses_submitter"
+            android:paddingTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submitter: test@completeinnovations.com"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fragment_manage_expenses_submitter_details_horizontal_separator"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+
+    <ListView
+        android:id="@+id/listview_expenses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

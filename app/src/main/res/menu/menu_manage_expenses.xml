@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.completeinnovations.ert.ui.activity.ManageExpensesActivity">
+
+
+    <!-- expenses details button -->
+    <item android:id="@+id/manage_expenses_activity_action_new_expense_details"
+          android:icon="@drawable/ic_action_new"
+          android:title="Add expense details"
+          app:showAsAction="ifRoom" />
+
+    <!-- submit report button -->
+    <item android:id="@+id/manage_expenses_activity_action_submit_report"
+          android:icon="@drawable/ic_action_send_now"
+          android:title="Submit report"
+          app:showAsAction="ifRoom" />
+
+    <!--<item android:id="@+id/main_activity_action_search"-->
+        <!--android:icon="@drawable/ic_action_search"-->
+        <!--android:title="search"-->
+        <!--app:showAsAction="ifRoom" />-->
+
+    <item android:id="@+id/manage_expenses_activity_action_accept"
+          android:icon="@drawable/ic_action_accept"
+          android:title="Accept"
+          app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/manage_expenses_activity_action_reject"
+          android:icon="@drawable/ic_action_remove"
+          android:title="Reject"
+          app:showAsAction="ifRoom" />
+
+    <!--<item android:id="@+id/action_settings"-->
+          <!--android:title="@string/action_settings"-->
+          <!--android:orderInCategory="100"-->
+          <!--app:showAsAction="never"/>-->
+</menu>

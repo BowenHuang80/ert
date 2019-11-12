@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.completeinnovations.ert.ui.activity.ExpenseDetailsActivity">
+
+    <item android:id="@+id/expense_details_activity_action_save"
+        android:icon="@drawable/ic_action_save"
+        android:title="save"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/expense_details_activity_undo"
+        android:icon="@drawable/ic_action_undo"
+        android:title="clear"
+        app:showAsAction="ifRoom" />
+
+    <!--<item android:id="@+id/main_activity_action_search"-->
+        <!--android:icon="@drawable/ic_action_search"-->
+        <!--android:title="search"-->
+        <!--app:showAsAction="ifRoom" />-->
+
+<!--    <item android:id="@+id/expense_details_activity_action_delete_expense"
+          android:icon="@drawable/ic_action_discard"
+          android:title="Discard"
+          app:showAsAction="ifRoom" />-->
+
+    <!--<item android:id="@+id/action_settings"-->
+          <!--android:title="@string/action_settings"-->
+          <!--android:orderInCategory="100"-->
+          <!--app:showAsAction="never"/>-->
+</menu>

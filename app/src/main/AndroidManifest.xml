@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.completeinnovations.ert" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:label="@string/app_name"
+             >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".data.ReportProvider"
+            android:authorities="@string/content_authority"
+            android:exported="false"
+            android:syncable="true" />
+
+        <!-- SyncAdapter authentication service -->
+        <service android:name=".sync.ReportAuthenticatorService" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <!-- SyncAdapter Service -->
+        <service
+            android:name=".sync.ReportSyncService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+
+        <activity
+            android:name=".ui.activity.ExpenseReportActivity"
+            android:label="@string/title_activity_expense_report"
+            android:parentActivityName=".ui.activity.MainActivity" >
+            <intent-filter>
+                <action android:name="com.completeinnovations.ert.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"
+                      android:host="ert.completeinnovations.com"
+                      android:pathPattern="/report/.*/"
+                    />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.ManageExpensesActivity"
+            android:label="@string/title_activity_manage_expenses"
+            android:parentActivityName=".ui.activity.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.ExpenseReportActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.ExpenseDetailsActivity"
+            android:label="@string/title_activity_expense_details"
+            android:parentActivityName=".ui.activity.MainActivity" >
+            <intent-filter>
+                <action android:name="com.completeinnovations.ert.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"
+                      android:host="ert.completeinnovations.com"
+                      android:pathPattern="/expensedetails/.*/"
+                    />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.ManageExpensesActivity" />
+        </activity>
+
+        <activity android:name=".authentication.AuthenticatorActivity" android:label="Login" />
+        <activity
+            android:name=".ui.activity.SearchActivity"
+            android:label="Search"
+            android:parentActivityName=".ui.activity.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

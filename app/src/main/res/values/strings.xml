@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ERT</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="sync_account_type">ert.completeinnovations.com</string>
+    <string name="content_authority">com.completeinnovations.ert</string>
+    <string name="title_activity_expense_report">Expense Report</string>
+    <string name="title_activity_manage_expenses">Manage Expenses</string>
+    <string name="title_activity_expense_details">Expense Details</string>
+    <string name="uploadreceipt">Upload Receipt</string>
+    <string-array name="category">
+        <item>On Call</item>
+        <item>Meals &amp; Entertainment</item>
+        <item>Phone/Fax</item>
+        <item>Airfare</item>
+        <item>Lodging</item>
+        <item>Equipment</item>
+        <item>Fees &amp; Dues</item>
+        <item>Promotions</item>
+        <item>Postage</item>
+        <item>Office Supplies</item>
+        <item>Transportation</item>
+        <item>Other (See Notes)</item>
+    </string-array>
+    <string-array name="currency">
+        <item>CAD</item>
+        <item>USD</item>
+        <item>EUR</item>
+    </string-array>
+    <string-array name="region">
+        <item>AB</item>
+        <item>BC</item>
+        <item>MB</item>
+        <item>NB</item>
+        <item>NL</item>
+        <item>NS</item>
+        <item>ON</item>
+        <item>PE</item>
+        <item>QC</item>
+        <item>SK</item>
+        <item>US</item>
+        <item>EU</item>
+    </string-array>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:paddingLeft="17dp"
+              android:paddingRight="17dp"
+              android:background="@color/colorPrimary"
+    >
+
+        <TextView
+            android:id="@+id/myTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ERT EXPENSE MANAGER "
+            android:layout_marginTop="70dp"
+            android:textSize="25sp"
+            android:paddingLeft="12dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/ic_launcher" />-->
+
+    <EditText android:id="@+id/accountName"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="70dp"
+              android:hint="Username"
+              android:drawableLeft="@drawable/ic_action_username"
+              android:inputType="textEmailAddress"
+              android:padding="8dp"
+              android:background="@color/colorWhite"
+        />
+
+    <EditText android:id="@+id/accountPassword"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:inputType="textPassword"
+              android:drawableLeft="@drawable/ic_action_password"
+              android:hint="Password"
+              android:padding="8dp"
+              android:background="@color/colorWhite"
+        />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button android:id="@+id/submit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/flat_selector"
+                android:textColor="@android:color/black"
+                android:text="Sign in"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
