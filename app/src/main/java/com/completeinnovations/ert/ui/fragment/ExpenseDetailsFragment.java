@@ -1,5 +1,6 @@
 package com.completeinnovations.ert.ui.fragment;
 
+import android.app.DatePickerDialog;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -33,11 +34,10 @@ import com.completeinnovations.ert.receipt.ERTReceipt;
 import com.completeinnovations.ert.receipt.ERTReceiptPicker;
 import com.completeinnovations.ert.restapi.ExpenseLineItem;
 import com.completeinnovations.ert.restapi.ExpenseReport;
-//import com.fourmob.datetimepicker.date.DatePickerDialog;
-import android.app.DatePickerDialog;
 
 import java.io.IOException;
-import java.util.Calendar;
+
+//import com.fourmob.datetimepicker.date.DatePickerDialog;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -123,24 +123,28 @@ public class ExpenseDetailsFragment extends Fragment implements DatePickerDialog
         configureSpinner(viewHolder.expenseCurrency, R.array.currency);
         configureSpinner(viewHolder.expenseRegion, R.array.region);
 
-        final Calendar calendar = Calendar.getInstance();
-        //final DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity().getApplicationContext());
+//        final Calendar calendar = Calendar.getInstance();
+//        final DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity().getApplicationContext());
+//
+//
+//        datePickerDialog.setStyle(DialogFragment., R.style.AppTheme);
 
+        final DatePickerDialog.OnDateSetListener tmpHolder= this;
 
-        //datePickerDialog.setStyle(DialogFragment., R.style.AppTheme);
-/*
         viewHolder.datePickerEditText.setOnClickListener(new View
                 .OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                datePickerDialog.setVibrate(false);
-                datePickerDialog.setYearRange(1985, 2028);
-                datePickerDialog.setCloseOnSingleTapDay(false);
-                datePickerDialog.show(getFragmentManager(), DATEPICKER_TAG);
+                DatePickerDialog datePickerDialog  = new DatePickerDialog(v.getContext(),
+                        tmpHolder,
+                        2019, 12, 05);
+                //datePickerDialog.setYearRange(1985, 2028);
+                //datePickerDialog.
+                //datePickerDialog.setCloseOnSingleTapDay(false);
+                datePickerDialog.show();//getFragmentManager(), DATEPICKER_TAG);
             }
         });
-*/
+
         viewHolder.receiptBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override

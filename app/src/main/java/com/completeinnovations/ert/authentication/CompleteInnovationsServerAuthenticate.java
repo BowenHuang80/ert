@@ -5,11 +5,8 @@ import android.util.Log;
 import org.apache.http.HttpResponse;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.NTCredentials;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
-
-import java.io.IOException;
 
 /**
  * Created by Abhinav on 1/10/2015.
@@ -45,17 +42,17 @@ public class CompleteInnovationsServerAuthenticate implements
 
         HttpGet httpGet = new HttpGet("http://ertapi.completeinnovations.com/");
 
-        try {
-            result = httpClient.execute(httpGet);//, responseHandler);
-
-        } catch (ClientProtocolException e) {
-            throw new Exception(e.getMessage());
-        } catch (IOException e) {
-            throw new Exception(e.getMessage());
-        }
+//        try {
+//            //result = httpClient.execute(httpGet);//, responseHandler);
+//            //int responseStatusCode = result.getStatusLine().getStatusCode();
+//        } catch (ClientProtocolException e) {
+//            //throw new Exception(e.getMessage());
+//        } catch (IOException e) {
+//            //throw new Exception(e.getMessage());
+//        }
 
         // get response code
-        int responseStatusCode = result.getStatusLine().getStatusCode();
+
 
         // if the response code is not 200 - OK, or 500 - Internal error,
         // then communication error occurred
